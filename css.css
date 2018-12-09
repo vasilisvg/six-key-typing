@@ -1,0 +1,99 @@
+body {
+	font: 120%/1.414 "Manu 7", georgia, serif;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;	
+	margin: 0 auto;
+	padding: 11.1111vmin;
+	max-width: 50em;
+}
+body {
+	display: grid;
+	grid-gap: 5.5555vmin;
+	grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+}
+
+form {
+	max-width: 22em;
+	margin: 0 auto;
+}
+input {
+	display: block;
+	font-size: 1.414em;
+	font-family: inherit;
+	width: 4ch;
+	border: 1px solid black;
+	transition: .2s;
+}
+input:focus {
+	box-shadow: 0 0 .2em .2em silver;
+}
+output {
+	font-size: 2em;
+	display: inline-block;
+	max-width: 20em;
+	word-break: break-all;
+	position: relative;
+}
+output:empty::after {
+	//display: none;
+}
+output span {
+	border-right: 1px solid red;
+	margin-left: .1em;
+	position: relative;
+}
+
+table {
+	border-collapse: collapse;
+	table-layout: fixed;
+	max-width: 22em;
+	margin: 0 auto;
+}
+td,
+th {
+	width: 2em;
+	height: 2em;
+	text-align: center;
+	border-bottom: 1px solid black;
+	transition: .2s;
+}
+th {
+	font-family: "Manu 8", Georgia, 'Times New Roman', Times, serif;
+	font-weight: normal;
+}
+thead th {
+	border-bottom: 3px double black;
+	opacity: .3;
+}
+.typing thead th {
+	opacity: 1;
+}
+tbody th {
+	border-right: 1px solid black;
+}
+.typing td,
+.typing tbody th {
+	opacity: .1;
+}
+.thisone td,
+tbody .thisone th {
+	opacity: 1;
+	background: yellow;
+}
+thead th:first-child {
+	border-right: 1px solid black;
+	opacity: 1;
+}
+.typing thead th:first-child {
+	border-right: none;
+}
+
+thead th:first-child::before {
+	content: '⬇';
+}
+.typing thead th:first-child::before {
+	content: '➡';
+}
+
