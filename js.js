@@ -1,6 +1,7 @@
 // Choose your keyboard layout, or make your own
 var k = ['1','2','3','4','5','6'];
 	k = ['[',']',';',"'",'\\','/'];
+	k = ['a','s','d',"j",'k','l']; // for peet!
 	k = ['u','i','o',"j",'k','l'];
 
 // add chosem keyboard layout to HTML
