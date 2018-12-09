@@ -34,7 +34,7 @@ var k = ['1','2','3','4','5','6'];
 		}
 		// These are the only character allowed + Backspace
 		if(e.key !== k[0] && e.key !== k[1] && e.key !== k[2] && e.key !== k[3] && e.key !== k[4] && e.key !== k[5] && e.key !== 'Backspace'){
-			console.log(e.key);
+			//console.log(e.key);
 			return false;
 		}
 	}
