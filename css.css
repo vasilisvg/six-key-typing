@@ -56,6 +56,7 @@ th {
 	width: 2em;
 	height: 2em;
 	text-align: center;
+	border-right: 1px solid transparent;
 	border-bottom: 1px solid black;
 	transition: .2s;
 }
@@ -69,25 +70,36 @@ thead th {
 }
 .typing thead th {
 	opacity: 1;
+	background: yellow;
+	border-right: 1px solid black;
 }
 tbody th {
 	border-right: 1px solid black;
+	background: yellow;
 }
 .typing td,
 .typing tbody th {
 	opacity: .1;
+	border-bottom-color: white;
+	border-right: 1px solid black;
+	background: white;
 }
-.thisone td,
 tbody .thisone th {
 	opacity: 1;
 	background: yellow;
+	border-bottom-color: black;
+}
+.thisone td {
+	opacity: 1;
+	border-bottom-color: black;
 }
 thead th:first-child {
 	border-right: 1px solid black;
 	opacity: 1;
 }
-.typing thead th:first-child {
-	border-right: none;
+.thisone ~ tr td,
+.thisone ~ tr th {
+	border-color: transparent !important;
 }
 
 thead th:first-child::before {
