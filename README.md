@@ -6,4 +6,4 @@ It’s a prototype. A common keyboard is more powerful.
 
 [You can try it yourself](https://vasilisvg.github.io/six-key-typing/).
 
-You can change the keys to use in the file [js.js](https://vasilisvg.github.io/six-key-typing/)
+You can change the keys to use in the file [js.js](js.js)
