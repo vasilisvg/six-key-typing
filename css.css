@@ -36,13 +36,13 @@ output {
 	word-break: break-all;
 	position: relative;
 }
-output:empty::after {
-	//display: none;
-}
 output span {
-	border-right: 1px solid red;
+	border-right: 1px solid white;
 	margin-left: .1em;
 	position: relative;
+}
+input:focus + output span {
+	border-right: 1px solid red;
 }
 
 table {
