@@ -63,7 +63,7 @@ var k = ['1','2','3','4','5','6'];
 		}
 		// if it’s the second
 		if(this.value.length == 2) {
-			addToOutput(this, this.value);
+			addToOutput(this, this.value.toLowerCase());
 		}
 	}
 })();
