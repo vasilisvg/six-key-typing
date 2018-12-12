@@ -5,9 +5,19 @@ var k = ['1','2','3','4','5','6'];
 	k = ['u','i','o',"j",'k','l'];
 
 (function(){
+	var r = 0;
 	var urlParams = new URLSearchParams(window.location.search);
 	var l = urlParams.get('keys');
-	if(l){
+	if(l && l.length > 5){
+		// check to see if there are no doubles
+		var text = l.split("");
+		text.some(function(v,i,a){
+			if(a.lastIndexOf(v)!=i) {
+				r = 1;	
+			}
+		});
+	}
+	if(r == 0) {
 		k[0] = l[0];
 		k[1] = l[1];
 		k[2] = l[2];

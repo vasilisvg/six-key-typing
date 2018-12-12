@@ -6,4 +6,4 @@ It’s a prototype. A common keyboard is more powerful.
 
 [You can try it yourself](https://vasilisvg.github.io/six-key-typing/).
 
-You can change the keyboard layout in [js.js](js.js)
+You can change the keyboard layout in [js.js](js.js), or by using the `keys` querystring in the URL. For instance: https://vasilisvg.github.io/six-key-typing/?keys=asdjkl
