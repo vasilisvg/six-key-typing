@@ -16,6 +16,7 @@ body {
 
 form {
 	max-width: 22em;
+	width: 100vw;
 	margin: 0 auto;
 }
 input {
@@ -49,6 +50,7 @@ table {
 	border-collapse: collapse;
 	table-layout: fixed;
 	max-width: 22em;
+	width: 100vw;
 	margin: 0 auto;
 }
 td,
