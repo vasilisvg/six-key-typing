@@ -4,6 +4,7 @@ var k = ['1','2','3','4','5','6'];
 	k = ['a','s','d',"j",'k','l']; // for peet!
 	k = ['u','i','o',"j",'k','l'];
 
+// Option to change keyboard layout with the "keys" querystring
 (function(){
 	var r = 0;
 	var urlParams = new URLSearchParams(window.location.search);
@@ -61,6 +62,14 @@ var k = ['1','2','3','4','5','6'];
 			//console.log(e.key);
 			return false;
 		}
+		if (e.key == 'Backspace') {
+			if(this.value.length == 0) {
+				var val = document.querySelector('output').innerText;
+				var newVal = val.substring(0, val.length-1);
+				document.querySelector('output').innerHTML = newVal + '<span></span>';
+				this.style.marginLeft = document.querySelector('output span').offsetLeft + 'px';
+			}
+		}
 	}
 	// If this is triggered it means one of the allowed keys is typed
 	inp.onkeyup = function(e) {
@@ -71,15 +80,7 @@ var k = ['1','2','3','4','5','6'];
 			document.querySelector('.thisone').classList.remove('thisone');
 			document.querySelector('table').classList.remove('typing');
 		}
-		if (e.key == 'Backspace') {
-			// If there’s nothing in the input, remove the last character from the output element
-			if(this.value.length == 0) {
-				var val = document.querySelector('output').innerText;
-				var newVal = val.substring(0, val.length-1);
-				document.querySelector('output').innerHTML = newVal + '<span></span>';
-				this.style.marginLeft = document.querySelector('output span').offsetLeft + 'px';
-			}
-		}
+		
 		// If it’s the first character that’s been typed
 		if(this.value.length == 1) {
 			highlightRow(e.key);
