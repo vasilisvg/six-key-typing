@@ -4,6 +4,18 @@ var k = ['1','2','3','4','5','6'];
 	k = ['a','s','d',"j",'k','l']; // for peet!
 	k = ['u','i','o',"j",'k','l'];
 
+(function(){
+	var urlParams = new URLSearchParams(window.location.search);
+	var l = urlParams.get('keys');
+	//console.log(myParam);
+	k[0] = l[0];
+	k[1] = l[1];
+	k[2] = l[2];
+	k[3] = l[3];
+	k[4] = l[4];
+	k[5] = l[5];
+})();
+
 // add chosem keyboard layout to HTML
 (function(){
 	// add to each thead th
