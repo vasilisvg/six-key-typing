@@ -8,7 +8,9 @@ var k = ['1','2','3','4','5','6'];
 (function(){
 	var r = 0;
 	var urlParams = new URLSearchParams(window.location.search);
-	var l =  urlParams.get('keys').toLowerCase();
+	if(urlParams.get('keys')) {
+		var l =  urlParams.get('keys').toLowerCase();
+	}
 	if(l && l.length > 5){
 		// check to see if there are no doubles
 		var text = l.split("");
