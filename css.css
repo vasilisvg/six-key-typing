@@ -39,6 +39,8 @@ textarea {
 	max-width: 20em;
 	word-break: break-all;
 	position: relative;
+	text-decoration: underline;
+	text-decoration: underline blue;
 }
 output span {
 	border-right: 1px solid white;
