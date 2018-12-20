@@ -17,6 +17,7 @@ body {
 form {
 	max-width: 22em;
 	margin: 0 auto;
+	width: 100vw;
 }
 input {
 	display: block;
@@ -29,8 +30,10 @@ input {
 input:focus {
 	box-shadow: 0 0 .2em .2em silver;
 }
-output {
-	font-size: 2em;
+output,
+textarea {
+	font: inherit;
+	font-size: 1em;
 	display: inline-block;
 	max-width: 20em;
 	word-break: break-all;
@@ -43,6 +46,9 @@ output span {
 }
 input:focus + output span {
 	border-right: 1px solid red;
+}
+textarea {
+	width: 100%;
 }
 
 table {

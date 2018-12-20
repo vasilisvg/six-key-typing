@@ -60,17 +60,20 @@ var k = ['1','2','3','4','5','6'];
 			return false;
 		}
 		// These are the only character allowed + Backspace
-		if(e.key !== k[0] && e.key !== k[1] && e.key !== k[2] && e.key !== k[3] && e.key !== k[4] && e.key !== k[5] && e.key !== 'Backspace'){
+		if(e.key !== k[0] && e.key !== k[1] && e.key !== k[2] && e.key !== k[3] && e.key !== k[4] && e.key !== k[5] && e.key !== 'Backspace' && e.key !== 'Enter' && e.key !== 'Tab' && e.key !== 'ArrowDown'){
 			//console.log(e.key);
 			return false;
 		}
 		if (e.key == 'Backspace') {
 			if(this.value.length == 0) {
-				var val = document.querySelector('output').innerText;
+				var val = document.querySelector('textarea').value;
 				var newVal = val.substring(0, val.length-1);
-				document.querySelector('output').innerHTML = newVal + '<span></span>';
-				this.style.marginLeft = document.querySelector('output span').offsetLeft + 'px';
+				document.querySelector('textarea').value = newVal;
+				//this.style.marginLeft = document.querySelector('textarea span').offsetLeft + 'px';
 			}
+		}
+		if (e.key == 'ArrowDown') {
+			document.querySelector('textarea').focus();
 		}
 	}
 	// If this is triggered it means one of the allowed keys is typed
@@ -91,6 +94,20 @@ var k = ['1','2','3','4','5','6'];
 		if(this.value.length == 2) {
 			addToOutput(this, this.value.toLowerCase());
 		}
+	}
+	// onsubmit, copy to clipboard
+	document.querySelector('form').onsubmit = function(){
+		window.setTimeout(function() {
+			document.querySelector('textarea').select();
+			try {
+				var successful = document.execCommand('copy');
+				var msg = successful ? 'successful' : 'unsuccessful';
+				//console.log('Copying text command was ' + msg);
+			  } catch (err) {
+				//console.log('Oops, unable to copy');
+			  }
+		}, 1);
+		return false;
 	}
 })();
 
@@ -141,9 +158,9 @@ function addToOutput(a, v) {
 	tt[k[5] + k[2]] = ',';
 	tt[k[5] + k[3]] = '.';
 	tt[k[5] + k[4]] = '?';
-	var oVal = document.querySelector('output').innerText;
-	document.querySelector('output').innerHTML = oVal + tt[v] + '<span></span>';
-	a.style.marginLeft = document.querySelector('output span').offsetLeft + 'px';
+	var oVal = document.querySelector('textarea').value;
+	document.querySelector('textarea').value = oVal + tt[v];
+	//a.style.marginLeft = document.querySelector('textarea span').offsetLeft + 'px';
 
 	//console.log(outAfter.length);
 }
