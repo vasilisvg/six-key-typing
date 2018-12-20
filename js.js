@@ -69,7 +69,6 @@ var k = ['1','2','3','4','5','6'];
 				var val = document.querySelector('textarea').value;
 				var newVal = val.substring(0, val.length-1);
 				document.querySelector('textarea').value = newVal;
-				//this.style.marginLeft = document.querySelector('textarea span').offsetLeft + 'px';
 			}
 		}
 		if (e.key == 'ArrowDown') {
@@ -160,7 +159,4 @@ function addToOutput(a, v) {
 	tt[k[5] + k[4]] = '?';
 	var oVal = document.querySelector('textarea').value;
 	document.querySelector('textarea').value = oVal + tt[v];
-	//a.style.marginLeft = document.querySelector('textarea span').offsetLeft + 'px';
-
-	//console.log(outAfter.length);
 }
