@@ -5,20 +5,27 @@ body {
 	align-items: center;
 	justify-content: space-evenly;	
 	margin: 0 auto;
-	padding: 11.1111vmin;
+	padding: 11.1111vh 11.1111vw;
 	max-width: 50em;
+	scroll-behavior: smooth;
 }
 body {
 	display: grid;
-	grid-gap: 5.5555vmin;
+	grid-gap: 5.5555vw;
 	grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+	grid-row-gap: 11.1111vh;
+}
+
+@media (min-width: 66.8em){
+	body {
+		grid-template-rows: 77.7777vh auto;
+	}
 }
 
 form {
 	max-width: 22em;
-	width: 100vw;
+	width: 90vw;
 	margin: 0 auto;
-	width: 100vw;
 }
 input {
 	display: block;
@@ -27,6 +34,7 @@ input {
 	width: 4ch;
 	border: 1px solid black;
 	transition: .2s;
+	margin-bottom: .5em;
 }
 input:focus {
 	box-shadow: 0 0 .2em .2em silver;
@@ -37,9 +45,10 @@ textarea {
 	max-width: 20em;
 	text-decoration: underline;
 	text-decoration: underline double limegreen;
-}
-textarea {
 	width: 100%;
+}
+legend {
+	background: white;
 }
 
 table {
@@ -106,3 +115,22 @@ thead th:first-child::before {
 	content: '➡';
 }
 
+/* Settings */ 
+body > [for="keys"] {
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	text-decoration: none;
+	position: absolute;
+	right: 11.1111vmin;
+	top: 5.5555vmin;
+	line-height: .7;
+}
+[maxlength="6"] {
+	width: 6em;
+}
+button {
+	font: inherit;
+}
+#settings fieldset:focus-within {
+	box-shadow: 0 0 .2em .2em yellow;
+}
