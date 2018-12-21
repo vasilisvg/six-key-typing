@@ -17,7 +17,6 @@ body {
 
 @media (min-width: 58.7em) and (min-height: 31.5em){
 	body {
-		grid-row-gap: 5.5555vh;
 		grid-template-rows: 88.8888vh auto;
 	}
 }
@@ -46,6 +45,8 @@ textarea {
 	text-decoration: underline;
 	text-decoration: underline double limegreen;
 	width: 100%;
+	height: auto;
+	max-height: 50vh;
 }
 legend {
 	background: white;
