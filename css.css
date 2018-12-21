@@ -13,11 +13,11 @@ body {
 	display: grid;
 	grid-gap: 5.5555vw;
 	grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-	grid-row-gap: 11.1111vh;
 }
 
-@media (min-width: 66.8em){
+@media (min-width: 66.8em) and (min-height: 36em){
 	body {
+		grid-row-gap: 11.1111vh;
 		grid-template-rows: 77.7777vh auto;
 	}
 }
@@ -121,8 +121,8 @@ body > [for="keys"] {
 	border-bottom: 1px solid;
 	text-decoration: none;
 	position: absolute;
-	right: 11.1111vmin;
-	top: 5.5555vmin;
+	right: 5.5555vw;
+	top: 5.5555vh;
 	line-height: .7;
 }
 [maxlength="6"] {
