@@ -11,3 +11,5 @@ You can change the keyboard layout in [js.js](js.js), or by using the `keys` que
 When you hit <kbd>enter</kbd> the text you typed will be selected. In browsers that support it, the text will be copied as well. As far as I know this is somehow not supported in Firefox. Help would be appreciated in fixing this.
 
 Uppercase characters are possible by typing one or two uppercase characters.
+
+You can [download a standalone Mac app version of this tool(https://github.com/vasilisvg/six-key-typing/raw/master/Six%20Key%20Typing.app.zip) as well.
