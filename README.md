@@ -12,4 +12,4 @@ When you hit <kbd>enter</kbd> the text you typed will be selected. In browsers t
 
 Uppercase characters are possible by typing one or two uppercase characters.
 
-You can [download a standalone Mac app version of this tool(https://github.com/vasilisvg/six-key-typing/raw/master/Six%20Key%20Typing.app.zip) as well.
+You can <a href="https://github.com/vasilisvg/six-key-typing/raw/master/Six%20Key%20Typing.app.zip">download a standalone Mac app version of this tool</a> as well.
