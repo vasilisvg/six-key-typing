@@ -31,24 +31,12 @@ input {
 input:focus {
 	box-shadow: 0 0 .2em .2em silver;
 }
-output,
 textarea {
 	font: inherit;
 	font-size: 1em;
-	display: inline-block;
 	max-width: 20em;
-	word-break: break-all;
-	position: relative;
 	text-decoration: underline;
 	text-decoration: underline double limegreen;
-}
-output span {
-	border-right: 1px solid white;
-	margin-left: .1em;
-	position: relative;
-}
-input:focus + output span {
-	border-right: 1px solid red;
 }
 textarea {
 	width: 100%;
