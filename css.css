@@ -5,7 +5,7 @@ body {
 	align-items: center;
 	justify-content: space-evenly;	
 	margin: 0 auto;
-	padding: 11.1111vh 11.1111vw;
+	padding: 5.5555vh 5.5555vw;
 	max-width: 50em;
 	scroll-behavior: smooth;
 }
@@ -15,10 +15,10 @@ body {
 	grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
 }
 
-@media (min-width: 66.8em) and (min-height: 36em){
+@media (min-width: 58.7em) and (min-height: 31.5em){
 	body {
-		grid-row-gap: 11.1111vh;
-		grid-template-rows: 77.7777vh auto;
+		grid-row-gap: 5.5555vh;
+		grid-template-rows: 88.8888vh auto;
 	}
 }
 
@@ -122,7 +122,7 @@ body > [for="keys"] {
 	text-decoration: none;
 	position: absolute;
 	right: 5.5555vw;
-	top: 5.5555vh;
+	top: 4.5vh;
 	line-height: .7;
 }
 [maxlength="6"] {
