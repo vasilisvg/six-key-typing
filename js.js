@@ -55,12 +55,13 @@ var k = ['1','2','3','4','5','6'];
 	var inp = document.querySelector('input');
 	inp.value = '';
 	inp.onkeydown = function(e) {
+		var theKey = e.key.toLowerCase();
 		// You can only type the sixth character once, and only as the first character
-		if(e.key == k[5] && inp.value.length == 1) {
+		if(theKey == k[5] && inp.value.length == 1) {
 			return false;
 		}
 		// These are the only character allowed + Backspace
-		if(e.key !== k[0] && e.key !== k[1] && e.key !== k[2] && e.key !== k[3] && e.key !== k[4] && e.key !== k[5] && e.key !== 'Backspace' && e.key !== 'Enter' && e.key !== 'Tab' && e.key !== 'ArrowDown'){
+		if(theKey !== k[0] && theKey !== k[1] && theKey !== k[2] && theKey !== k[3] && theKey !== k[4] && theKey !== k[5] && e.key !== 'Backspace' && e.key !== 'Enter' && e.key !== 'Tab' && e.key !== 'ArrowDown'){
 			//console.log(e.key);
 			return false;
 		}
@@ -91,7 +92,7 @@ var k = ['1','2','3','4','5','6'];
 		}
 		// if it’s the second
 		if(this.value.length == 2) {
-			addToOutput(this, this.value.toLowerCase());
+			addToOutput(this, this.value);
 		}
 	}
 	// onsubmit, copy to clipboard
@@ -157,6 +158,14 @@ function addToOutput(a, v) {
 	tt[k[5] + k[2]] = ',';
 	tt[k[5] + k[3]] = '.';
 	tt[k[5] + k[4]] = '?';
+	var newVal = '';
+	// A simple check for uppercase
+	if (v !== v.toLowerCase()) {
+		newVal = tt[v.toLowerCase()].toUpperCase();
+	}
+	else {
+		newVal = tt[v.toLowerCase()];
+	}
 	var oVal = document.querySelector('textarea').value;
-	document.querySelector('textarea').value = oVal + tt[v];
+	document.querySelector('textarea').value = oVal + newVal;
 }
